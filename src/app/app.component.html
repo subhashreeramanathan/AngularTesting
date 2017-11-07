@@ -1,0 +1,19 @@
+<main>
+    <ej-grid #grid [dataSource]="gridData" [allowPaging]="paging" [allowSorting]="sorting"></ej-grid>
+    <button type="button" id="btn" ej-button #button [(ngModel)]="value" text="btntext" (click)="click(event)"></button>
+    <ej-chart #chart [legend.visible]="chartlegend">
+        <e-seriescollection >
+            <e-series xName="ShipCity" [dataSource]="chartData" yName="Freight" >
+            </e-series>
+        </e-seriescollection>
+    </ej-chart>
+    <input type="text" id="datepicker" ej-datepicker [value]="datepickval" #datepick />
+    <input id="colorpick" ej-colorpicker [value]="colorval" #colorpicker (change)="change($event)" />
+    <ej-listview #listview [dataSource]="listdata" [fieldsettings]="fieldsdata" width="300"></ej-listview>
+    <input type="text" id="autocomp" #autocomplete ej-autocomplete [options]="option"/>
+    <input id="dropdownlist" #dropdown ej-dropdownlist [dataSource]="dropdowndata" [fields]="fieldsvalues" [(value)]="value"/>
+    <input id="numeric" #numerictextbox type="text" ej-numerictextbox [(ngModel)]="value" width="250px" />
+    <ej-circulargauge id="defaultcircularGauge" #circular  [options]="circularoption"></ej-circulargauge>
+    <div>{{value}}</div>
+    <!-- <input type="button" id="textbox" (click)="changee()"/> -->
+</main>
